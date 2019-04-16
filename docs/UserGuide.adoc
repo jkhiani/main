@@ -56,6 +56,7 @@ e.g. typing *`help`* and pressing kbd:[Enter] will open the help window.
 
 Format: `help`
 
+// tag::add[]
 === Adding a person : `add`
 
 Adds a person to the consumer list. +
@@ -68,6 +69,8 @@ Examples:
 
 * `add n/Jane Doe p/23456789 e/janed@example.com a/113, Clementi Ave 2, #02-24 s/5000 o/teacher r/single`
 * `add n/John Doe p/98765432 e/johnd@example.com a/311, Clementi Ave 2, #02-25 s/100000 o/banker r/single t/friends t/owesMoney`
+
+// end::add[]
 
 // tag::addcpny[]
 === Adding a company : `addcpny`
@@ -184,6 +187,8 @@ Returns `Burger Spot` and `Burger King`
 Returns any person having names `Burger`, `Taco`, or `Shoes`
 // end::findcpny[]
 
+
+// tag::findOccupation[]
 === Locating persons by occupation : `findOccupation`
 
 ****
@@ -197,7 +202,9 @@ Examples:
 
 * `findOccupation teacher` +
 Returns `Bob` and `Alice` (Their occupation is teacher)
+// end::findOccupation[]
 
+// tag::findSector[]
 === Locating companies by sector : `findSector`
 
 ****
@@ -211,6 +218,7 @@ Examples:
 
 * `findCompany bank` +
 Returns `OCCC` (Its sector is bank)
+// end::findSector[]
 
 === Deleting a person : `delete`
 
@@ -344,6 +352,7 @@ Format: `clear`
 Exits the program. +
 Format: `exit`
 
+// tag::sortper[]
 === Sorting persons by name/salary/occupation/residential area/group : `sortper`
 
 Lists all people that meet the specified filter requirement(in sequence/reverse order).
@@ -355,8 +364,9 @@ Examples:
 `sortper` salary seq     (list all persons by salary in sequence order)
 
 `sortper` phone rev            (list all persons by their phone number in reverse order)
+// end::sortper[]
 
-
+// tag::sortcpny[]
 === Sorting companies by name/revenue/occupation/residential area/group : `sortcpny`
 
 Lists all companies that meet the specified filter requirement(in sequence/reverse order).
@@ -368,9 +378,9 @@ Examples:
 `sortcpny` revenue seq     (list all companies by revenue in sequence order)
 
 `sortcpny` phone rev            (list all companies by their phone number in reverse order)
+// end::sortcpny[]
 
-
-=== Find clients: `findCli` `[coming in v1.4]`
+=== Find clients: `findCli` `[coming in v2.0]`
 
 Lists all persons deemed capable of affording a specific product based on salary
 
@@ -383,7 +393,7 @@ findCli 100
 findCli 20
 
 
-=== Find shops: `findShops` `[coming in v1.4]`
+=== Find shops: `findShops` `[coming in v2.0]`
 
 
 Lists all stores a person is deemed capable of visiting based on salary and store pricing
@@ -455,7 +465,7 @@ image::listFav.png[width="200"]
 
 // end::favorite[]
 
-=== Create group: `group` `[coming in v1.4]`
+=== Create group: `group` `[coming in v2.0]`
 
 Creates a group of persons
 
@@ -467,6 +477,8 @@ Examples:
 
 `group` winners n/jacob a/1 queen st n/adam a/10 north st
 
+// tag::export[]
+
 === Export data as CSV: `export`
 
 Exports the data to a CSV file
@@ -476,42 +488,55 @@ Format: `export` [FILEPATH] [FILENAME]
 Examples:
 
 `export` /Users/fandongzhe/Desktop/fg market (type in the whole filepath)
+// end::export[]
 
-
-
+// tag::averageSalary[]
 === Show average salary for all persons: `averageSalary`
 
 Shows average salary for all persons in the address book
 
-Examples:
-
 Format: `averageSalary`
+// end::averageSalary[]
 
+// tag::medianSalary[]
 === Show median salary for all persons: `medianSalary`
 
 Shows median salary for all persons in the address book
 
-Examples:
-
 Format: `medianSalary`
+// end::medianSalary[]
 
+// tag::findmax[]
+=== Show maximum salary for all clients: `findmax`
+
+Show maximum salary for all clients in the address book
+
+Format: `findmax`
+// end::findmax[]
+
+// tag::findmin[]
+=== Show minimum salary for all clients: `findmin`
+
+Show minimum salary for all clients in the address book
+
+Format: `findmin`
+// end::findmin[]
+
+// tag::averageRevenue[]
 === Show average revenue for all companies: `averageRevenue`
 
 Shows average revenue for all companies in the address book
 
-Examples:
-
 Format: `averageRevenue`
+// end::averageRevenue[]
 
+// tag::medianRevenue[]
 === Show median revenue for all revenue: `medianRevenue`
 
 Shows median revenue for all companies in the address book
 
-Examples:
-
 Format: `medianRevenue`
-
-
+// end::medianRevenue[]
 
 === Saving the data
 
